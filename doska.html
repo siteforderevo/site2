@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска - ИП Мусихин Георгий Владимирович</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #009900;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #009900;
+            margin-bottom: 30px;
+        }
+        .products-container {
+            margin-top: 20px;
+        }
+        /* Ряд с 4 элементами */
+        .row-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        /* Ряд с 3 элементами */
+        .row-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        /* Ряд с 2 элементами */
+        .row-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Добавлено для кликабельности */
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #e0e0e0;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #009900;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .prices {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .price-unit {
+            font-weight: bold;
+            color: #666;
+        }
+        .price-value {
+            color: #009900;
+            font-weight: 700;
+        }
+        footer {
+            background-color: #009900;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        /* Адаптивность для мобильных */
+        @media (max-width: 768px) {
+            main {
+                padding: 10px;
+            }
+            .row-4 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .row-3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .row-2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .product-info {
+                padding: 10px;
+            }
+            .product-name {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            .row-4, .row-3, .row-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ИП Мусихин Георгий Владимирович</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="brus.html">Брусок</a></li>
+                <li><a href="doska.html">Доска</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Стоимость за доску</h1>
+        <div class="products-container">
+            <!-- Ряд 1: 3 элемента (Планкен 20x85, 20x90, 20x100) -->
+            <div class="row-3">
+                <a href="planken20x85.html" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="C:\Users\user\Desktop\site\site\20x85x3000.png" alt="Планкен 20x85x3000 мм">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Планкен 20x85x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">215 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="planken20x90.html" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="C:\Users\user\Desktop\site\site\20x90x3000.png" alt="Планкен 20x90x3000 мм">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Планкен 20x90x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">227 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="planken20x100.html" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="C:\Users\user\Desktop\site\site\20x100x3000.png" alt="Планкен 20x100x3000 мм">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Планкен 20x100x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">252 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ряд 2: 2 элемента (Планкен 20x110, 20x140) -->
+            <div class="row-2">
+                <a href="planken20x110.html" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="C:\Users\user\Desktop\site\site\20x110x3000planken.png" alt="Планкен 20x110x3000 мм">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Планкен 20x110x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">278 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="planken20x140.html" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="C:\Users\user\Desktop\site\site\20x140x3000planken.png" alt="Планкен 20x140x3000 мм">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Планкен 20x140x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">353 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ряд 3: 2 элемента (Доска 40x85, 45x90) -->
+            <div class="row-2">
+                <a href="doska40x85.html" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="C:\Users\user\Desktop\site\site\40x85x3000doska.png" alt="Доска 40x85x3000 мм">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Доска 40x85x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">252 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="doska45x90.html" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="C:\Users\user\Desktop\site\site\45x90x3000doska.png" alt="Доска 45x90x3000 мм">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Доска 45x90x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">252 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 ИП Мусихин Георгий Владимирович</p>
+        <p>Телефон: +7 (912) 383-36-17</p>
+        <p>Адрес: Тюменская область, г. Тюмень, ул. Голышева 1, строение 1</p>
+    </footer>
+</body>
+</html>

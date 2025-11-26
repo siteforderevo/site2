@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Брусок - ИП Мусихин Георгий Владимирович</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #009900;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #009900;
+            margin-bottom: 30px;
+        }
+        .products-container {
+            margin-top: 20px;
+        }
+        /* Ряд с 4 элементами */
+        .row-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        /* Ряд с 3 элементами */
+        .row-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        /* Ряд с 2 элементами */
+        .row-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .product-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-link:hover .product-card {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Масштабирует фото без искажений */
+            background-color: #e0e0e0; /* Fallback, если img не загрузится */
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #009900;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .prices {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .price-unit {
+            font-weight: bold;
+            color: #666;
+        }
+        .price-value {
+            color: #009900;
+            font-weight: 700;
+        }
+        footer {
+            background-color: #009900;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        /* Адаптивность для мобильных */
+        @media (max-width: 768px) {
+            main {
+                padding: 10px;
+            }
+            .row-4 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .row-3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .row-2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .product-info {
+                padding: 10px;
+            }
+            .product-name {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            .row-4, .row-3, .row-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ИП Мусихин Георгий Владимирович</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="brus.html">Брусок</a></li>
+                <li><a href="doska.html">Доска</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Стоимость за брусок</h1>
+        <div class="products-container">
+            <!-- Ряд 1: 4 элемента (15x45 + 3x 20x40) -->
+            <div class="row-4">
+                <a href="brus-15x45x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\15x45x3000.jpg" alt="Брусок 15x45x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 15x45x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">85.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-20x40x2000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\20x40x2000.jpg" alt="Брусок 20x40x2000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 20x40x2000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">68.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-20x40x2500.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\20x40x2500.jpg" alt="Брусок 20x40x2500 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 20x40x2500 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">84.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-20x40x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\50x70brus.jpg" alt="Брусок 20x40x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 20x40x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">101.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ряд 2: 4 элемента (3x 30x40 + 30x50) -->
+            <div class="row-4">
+                <a href="brus-30x40x2000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\30x40x2000.jpg" alt="Брусок 30x40x2000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 30x40x2000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">101.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-30x40x2500.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\30x40x2500.jpg" alt="Брусок 30x40x2500 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 30x40x2500 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">126.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-30x40x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\30x40x3000.jpg" alt="Брусок 30x40x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 30x40x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">152.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-30x50x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\30x50x3000.jpg" alt="Брусок 30x50x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 30x50x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">189.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ряд 3: 3 элемента (3x 40x40) -->
+            <div class="row-3">
+                <a href="brus-40x40x2000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x40x2000.jpg" alt="Брусок 40x40x2000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x40x2000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">135.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-40x40x2500.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x40x2500.jpg" alt="Брусок 40x40x2500 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x40x2500 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">168.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-40x40x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x40x3000.jpg" alt="Брусок 40x40x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x40x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">201.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ряд 4: 3 элемента (40x50x2000, 40x50x2500, 40x50x3000) -->
+            <div class="row-3">
+                <a href="brus-40x50x2000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x50x2000.jpg" alt="Брусок 40x50x2000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x50x2000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">168.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-40x50x2500.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x50x2500.jpg" alt="Брусок 40x50x2500 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x50x2500 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">210.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-40x50x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x50x3000.jpg" alt="Брусок 40x50x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x50x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">252.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ряд 5: 3 элемента (50x50x2000, 50x50x2500, 50x50x3000) -->
+            <div class="row-3">
+                <a href="brus-40x60x2000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x60x2000.jpg" alt="Брусок 50x50x2000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x60x2000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">210.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-40x60x2500.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x60x2500.jpg" alt="Брусок 50x50x2500 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x60x2500 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">262.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-40x60x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\40x60x3000.jpg" alt="Брусок 50x50x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 40x60x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">315.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ряд 6: 2 элемента (45x70x3000, 50x50x3000) -->
+            <div class="row-2">
+                <a href="brus-45x70x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\45x70x3000.jpg" alt="Брусок 45x70x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 45x70x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">396.90 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="brus-50x50x3000.html" class="product-link">
+                    <div class="product-card">
+                        <img src="C:\Users\user\Desktop\site\site\50x50x3000.jpg" alt="Брусок 50x50x3000 мм" class="product-image">
+                        <div class="product-info">
+                            <div class="product-name">Брусок 50x50x3000 мм</div>
+                            <div class="prices">
+                                <div class="price-item">
+                                    <span class="price-unit">шт</span>
+                                    <span class="price-value">315.00 руб.</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-unit">м³</span>
+                                    <span class="price-value">42000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 ИП Мусихин Георгий Владимирович. Все права защищены.</p>
+        <p>Контакты: +7 (912) 383-36-17 | +7 (912) 383-36-17</p>
+    </footer>
+</body>
+</html>
+

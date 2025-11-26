@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Брусок 15x45x3000 мм - ИП Мусихин Георгий Владимирович</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #009900;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .product-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #e0e0e0; /* Fallback */
+        }
+        .product-details {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #009900;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .product-sizes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+        .size-label {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .prices {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .price-unit {
+            color: #666;
+        }
+        .price-value {
+            color: #009900;
+        }
+        .description {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            grid-column: 1 / -1; /* Занимает всю ширину */
+        }
+        .description h2 {
+            color: #009900;
+            margin-top: 0;
+        }
+        footer {
+            background-color: #009900;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 10px;
+                gap: 20px;
+            }
+            .product-title {
+                font-size: 20px;
+            }
+            .product-sizes {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ИП Мусихин Георгий Владимирович</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="brus.html">Брусок</a></li>
+                <li><a href="doska.html">Доска</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="C:/Users/user/Pictures/site/30x40x2000.jpg" alt="Брусок 15x45x3000 мм" class="product-image">
+        
+        <div class="product-details">
+            <div class="product-title">Брусок 30x40x2000 мм</div>
+            
+            <div class="product-sizes">
+                <span class="size-label">30x40x2000</span>
+                <span>мм</span>
+            </div>
+            
+            <div class="prices">
+                <div class="price-item">
+                    <span class="price-unit">За шт:</span>
+                    <span class="price-value">101.00 руб.</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-unit">За м³:</span>
+                    <span class="price-value">42000 руб.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <h2>Описание товара</h2>
+            <p>Качественный брусок из сосны, подходящий для строительных и мебельных работ. Длина 2000 мм, сечение 30x40 мм. Материал высушен до влажности 12-16%. Идеален для каркасов, обрешетки и декоративных элементов. Цена за м³ фиксированная — 42000 руб.</p>
+            <p>Характеристики: <br>
+            - Порода: Сосна <br>
+            - Влажность: 12-16% <br>
+            - Поверхность: Строганая с радиальной фаской</p>
+        </div>
+    </main>
+    <footer>
+        <p>ИП Мусихин Георгий Владимирович</p>
+        <p>Телефон: +7 (912) 383-36-17</p>
+        <p>Адрес: Тюменская область, г.Тюмень, ул.Голышева 1, строение 1</p>
+    </footer>
+</body>
+</html>

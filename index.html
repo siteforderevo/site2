@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производство деревянных изделий ИП Мусихин Георгий Владимирович</title>
+    <meta name="description" content="ИП Мусихин Георгий Владимирович брусок, доска, пиломатериалы. Качественные материалы для строительства и ремонта.">
+    <link rel="icon" href="data:,">  <!-- Пустая иконка для переопределения кэша -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили (как в brus.html и doska.html) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { background: #009900; color: white; padding: 10px 0; position: sticky; top: 0; z-index: 100; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+        .logo { display: inline-block; font-weight: 700; color: white; text-decoration: none; font-size: 1.2em; } /* Стили для текста логотипа */
+        .contacts { display: flex; gap: 20px; font-size: 14px; }
+        nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+        nav a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: #fff; text-decoration: underline; }
+        .dropdown { position: relative; }
+        .dropdown-content { display: none; position: absolute; background: #007700; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1; border-radius: 4px; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { padding: 12px 16px; display: block; }
+        .dropdown-content a:hover { background: #009900; }
+
+        /* Контент главной страницы */
+        .hero { background: #e8f5e8; padding: 50px 0; text-align: center; }
+        .hero h1 { font-size: 3em; color: #009900; margin-bottom: 20px; }
+        .hero p { font-size: 1.2em; color: #666; max-width: 600px; margin: 0 auto; }
+
+        .catalog { padding: 50px 0; }
+        .catalog h2 { text-align: center; margin-bottom: 40px; font-size: 2.5em; color: #009900; }
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .catalog-card { background: #f8f8f8; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; cursor: pointer; }
+        .catalog-card:hover { transform: translateY(-5px); }
+        .catalog-card img { width: 100%; height: 200px; object-fit: cover; }
+        .catalog-card h3 { padding: 20px; color: #009900; font-size: 1.5em; }
+        .catalog-card p { padding: 0 20px 20px; color: #666; }
+
+        /* Footer */
+        footer { background: #333; color: white; padding: 40px 0; text-align: center; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .footer-section h4 { color: #009900; margin-bottom: 10px; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: #ccc; text-decoration: none; }
+        .footer-section a:hover { color: #009900; }
+
+        /* Адаптив */
+        @media (max-width: 768px) {
+            .header-top { flex-direction: column; gap: 10px; }
+            nav ul { justify-content: center; }
+            .hero h1 { font-size: 2.5em; }
+            .catalog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo">ИП Мусихин Георгий Владимирович</a>  <!-- Текстовый логотип -->
+                <div class="contacts">
+                    <span>Тел: +7 (912) 383-36-17</span>
+                    <span>Email: ip.musihin.gv@mail.ru</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#">Каталог</a>
+                        <div class="dropdown-content">
+                            <a href="brus.html">Брусок</a>  <!-- Ссылка на brus.html -->
+                            <a href="doska.html">Доска</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Контент главной страницы -->
+    <section class="hero">
+        <div class="wrapper">
+            <h1>Производство деревянных изделий</h1>
+            <p>Качественные пиломатериалы для вашего проекта: брусок, доска и планкен.</p>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="wrapper">
+            <h2>Каталог товаров</h2>
+            <div class="catalog-grid">
+                <a href="brus.html" class="catalog-card">  <!-- Кликабельная карточка на brus.html -->
+                    <img src="C:\Users\user\Desktop\site\site\bruski.jfif" alt="брус" class="product-image">
+                    <h3>Брусок</h3>
+                    <p>Строганый и профилированный сухой брусок различных размеров для строительства и ремонта.</p>
+                </a>
+                <a href="doska.html" class="catalog-card">  <!-- Кликабельная карточка на doska.html -->
+                    <img src="C:\Users\user\Desktop\site\site\doski.jpg" alt="доски" class="product-image">
+                    <h3>Доска</h3>
+                    <p>Обрезная доска из качественной древесины по доступным ценам.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="brus.html">Брусок</a></li>
+                        <li><a href="doska.html">Доска</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#">Адрес: Тюменская область, г.Тюмень, ул.Голышева 1, строение 1</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>Тел: +7 (912) 383-36-17</li>
+                        <li>Email: ip.musihin.gv@mail.ru</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
